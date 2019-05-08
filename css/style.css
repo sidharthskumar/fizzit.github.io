@@ -1,3 +1,200 @@
-#head{
-    background-image: url("images/images.jpeg");
+body{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+
 }
+
+
+.heading-block { margin-bottom: 50px; }
+
+.heading-block h1,
+.heading-block h2,
+.heading-block h3,
+.heading-block h4,
+.emphasis-title h1,
+.emphasis-title h2 {
+	margin-bottom: 0;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #333;
+}
+
+.emphasis-title h1,
+.emphasis-title h2 {
+	font-weight: 400;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+.heading-block h1 { font-size: 100px; }
+
+.heading-block h2 { font-size: 30px; }
+
+.heading-block h3 { font-size: 26px; }
+
+.heading-block h4 {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.heading-block > span:not(.before-heading) {
+	display: block;
+    margin-top: 10px;
+    font-size: 20px;
+	font-weight: 300;
+	color: #777;
+}
+
+.heading-block .before-heading { margin-bottom: 7px; }
+
+.heading-block.center > span,
+.heading-block.title-center > span,
+.center .heading-block > span {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.heading-block h1 + span { font-size: 24px; }
+
+.heading-block h2 + span { font-size: 22px; }
+
+.heading-block h3 + span,
+.heading-block h4 + span { font-size: 20px; }
+
+.heading-block ~ p:not(.lead) { font-size: 15px; }
+
+.heading-block:after {
+	content: '';
+	display: block;
+	margin-top: 30px;
+	width: 40px;
+	border-top: 2px solid #444;
+}
+.center .heading-block:after,
+.heading-block.center:after,
+.heading-block.title-center:after { margin: 30px auto 0; }
+
+.tright .heading-block,
+.heading-block.tright,
+.heading-block.title-right { direction: rtl; }
+
+.heading-block.noborder:after,
+.heading-block.nobottomborder:after { display: none; }
+
+.heading-block.border-color:after { border-color: #1ABC9C; }
+/* #head{
+    background-image: url("../images/dark.jpeg");
+    background-size:100% 90% ;
+    
+    background-repeat: no-repeat;
+    height: 500px;
+    min-width:1000px;
+} */
+/* .button-dark { background-color: #444; }
+.button.button-dark:hover { background-color: #1ABC9C; }
+.button.button-large {
+	padding: 0 26px;
+	font-size: 16px;
+	height: 46px;
+	line-height: 46px;
+} */
+.heading-block.border-color:after { border-color: #1ABC9C; }
+.nobottommargin { margin-bottom: 0 !important; }
+.section .container { z-index: 2; }
+.section {
+	position: relative;
+	margin: 0px 0;
+	padding: 60px 0;
+	background-color: #F9F9F9;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+.topmargin-sm { margin-top: 30px !important; }
+/* .button.button-rounded { border-radius: 3px; }
+.button.button-border {
+	border: 2px solid #444;
+	background-color: transparent;
+	color: #333;
+	line-height: 36px;
+	font-weight: 600;
+	text-shadow: none;
+} */
+
+button.button-border:not(.button-fill):hover {
+    background-color: #444;
+    
+    color: #FFF;
+    border-color: transparent !important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+.button.button-border.button-large {
+    line-height: 42px;
+}
+/* .button.button-dark:hover {
+    background-color: #1ABC9C;
+} */
+body:not(.device-touch) .button {
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.button.button-border {
+    border: 2px solid #444;
+    background-color: transparent;
+    color: #333;
+    line-height: 36px;
+    font-weight: 600;
+    text-shadow: none;
+}
+.button.button-rounded {
+    border-radius: 3px;
+}
+.button.button-large {
+    padding: 0 26px;
+    font-size: 16px;
+    height: 46px;
+    line-height: 46px;
+}
+
+a:hover {
+    color: #222;
+}
+/* a:hover {
+    color: #23527c;
+    text-decoration: underline;
+} */
+a:active, a:hover {
+    outline: 0;
+}
+.button-dark {
+    background-color: #444;
+}
+.button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+    margin: 5px;
+    padding: 0 22px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    /* background-color: #1ABC9C; */
+    color: #FFF;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+.button:hover {
+    background-color: #444;
+    color: #FFF;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-decoration: none;
+}
+.noleftmargin { margin-left: 0 !important; }
