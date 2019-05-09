@@ -1,18 +1,54 @@
 <html>
 <head>
 <title > Fizzit</title>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="./images/logogray2.ico">
-
+<script src="./js/jquery-3.4.1.min.js"></script>
 <link rel="stylesheet" href="./css/font-awesome.min.css"/>
 <link rel="stylesheet" href="./css/style.css"/>
 <link href="./css/fontgoogle.css" rel="stylesheet" type="text/css" />
-	
+	<script src='./css/bootstrap.min.js'></script>
 <link rel="stylesheet" href="./css/bootstrap.css" type="text/css" />
 	<!-- <link rel="stylesheet" href="style.css" type="text/css" /> -->
 	<!-- <link rel="stylesheet" href="css/dark.css" type="text/css" /> -->
 	<link rel="stylesheet" href="./css/font-icons.css" type="text/css" />
     <link rel="stylesheet" href="./css/responsive.css" type="text/css" />
+
+
+    <script>
+        var slideIndex = 0;
+        var no=2;//no of quotes
+        $(document).ready(function(){
+            
+        showSlides();
+        });
+        
+
+function showSlides() {
+ 
+  
+  //var slides = document.getElementsByClassName("mySlides");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none"; 
+//   }
+  slideIndex++;
+  if (slideIndex > no) {slideIndex = 1;} 
+ 
+      if(slideIndex==2){
+      document.getElementById('ins').innerHTML='You can do it...';
+      document.getElementById('i2').innerHTML='Mr. X Joseph';
+      document.getElementById('i3').innerHTML='Chief Executive Of SIFFS';
+      }
+      else if(slideIndex==1){
+        document.getElementById('ins').innerHTML='This could be the next million dollar company...';
+      document.getElementById('i2').innerHTML='Mr. Thomas Cheriyan';
+      document.getElementById('i3').innerHTML='Chief Executive Of SIFFS';
+      }
+  
+//   slides[slideIndex-1].style.display = "block"; 
+  setTimeout(showSlides, 2500); // Change image every 2 seconds
+}
+    </script>
 
 </head>
 
@@ -29,7 +65,7 @@
 
         <div class="container clearfix" style="z-index: 1;">
 
-            <div class="col-md-6 nobottommargin">
+            <div class="col-md-6 col-sm-6 nobottommargin">
 
                 <div class="heading-block topmargin-sm">
                     <h1><img src="./images/logogray.png" style="margin-bottom:20px;display: inline-block; margin-right:20px;">FIZZIT</h1>
@@ -77,8 +113,8 @@
                     <i class="fa fa-quote-right" id='qq'></i><br>
                     <h4 id="ins">This could be the next million dollar company...</h4>
                     <i class="fa fa-quote-right" id='qq2' aria-hidden="true"></i>
-                           <span class='who'>- Mr X Joseph</span> 
-                        <span class="who">Director of SIFFS</span></p>
+                           <span class='who' id='i2'>&nbsp; &nbsp;&nbsp;- Mr Thomas Cheriyan</span> 
+                        <span class="who" id='i3'>Chief Executive of SIFFS</span></p>
                   </div>
 
 
