@@ -336,3 +336,38 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50px;
 }
 
+#quoth{
+    font-size: 30px;
+    
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+#qq{
+    margin-left: 400px;
+   font-size: 50px;
+}
+#qb{
+    background-color: #F9F9F9;
+    margin-left: 0px;
+    height: 350px;
+    
+}
+#ins{
+ 
+    margin-left: 480px;
+    margin-top:-10px;
+    font-size: 20px;
+    font-style: italic;
+}
+.who{
+    margin-left: 840px;
+    margin-top:600px;
+}
+#qq2{
+    margin-left: 950px; 
+    font-size:50px;
+}
+.say{
+    margin-top:30px;
+}
