@@ -290,4 +290,23 @@ body:not(.device-touch) .clients-grid li a {
 	color: #E5E5E5;
 	width: 100%;
 }
+.team{
+    height: 500px;
+}
+.team .eachmem {
+    display: inline-block;
+    margin-left: 130px;
+}
 
+.rounded-circle{
+    border-radius: 100px;
+}
+#teamt{
+    text-align: center;
+    margin-bottom: 80px;
+}
+.team span{
+   display: block;
+   text-align: left;
+    margin-left: 70px;
+}
