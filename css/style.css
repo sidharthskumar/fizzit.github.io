@@ -359,15 +359,40 @@ body::-webkit-scrollbar-thumb {
     margin-top:-10px;
     font-size: 20px;
     font-style: italic;
+    animation-timing-function: ease-in-out;
+    
 }
 .who{
     margin-left: 800px;
     margin-top:600px;
+    animation-timing-function: ease-in-out;
+  
 }
 #qq2{
     margin-left: 950px; 
     font-size:50px;
+    animation-timing-function: ease-in-out;
+    
 }
 .say{
     margin-top:30px;
 }
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name:fade;
+    animation-duration: 2s;
+  }
+  @-webkit-keyframes fade {
+    from {opacity: .8} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .8} 
+    to {opacity: 1}
+  }
+  .ent{
+    animation-timing-function: ease-in-out;
+    
+  }

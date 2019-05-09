@@ -35,18 +35,22 @@ function showSlides() {
   if (slideIndex > no) {slideIndex = 1;} 
  
       if(slideIndex==2){
-      document.getElementById('ins').innerHTML='You can do it...';
-      document.getElementById('i2').innerHTML='Mr. X Joseph';
-      document.getElementById('i3').innerHTML='Chief Executive Of SIFFS';
+    //   document.getElementById('ins').innerHTML='You can do it...';
+    //   document.getElementById('i2').innerHTML='Mr. X Joseph';
+    //   document.getElementById('i3').innerHTML='Chief Executive Of SIFFS';
+
+
+    document.getElementsByClassName('w3-panel w3-card-4 w3-light-grey')[0].innerHTML="<p class='ent fade'><i class='fa fa-quote-right' id='qq'></i><br><h4 class='fade' id='ins'>Youcan do it...</h4><i class='fa fa-quote-right fade' id='qq2' aria-hidden='True'></i><span class='who fade' id='i2'>&nbsp; &nbsp;&nbsp;- Mr X Joseph</span> <span class='who fade' id='i3'>Chief Executive of SIFFS</span></p>";
       }
       else if(slideIndex==1){
-        document.getElementById('ins').innerHTML='This could be the next million dollar company...';
-      document.getElementById('i2').innerHTML='Mr. Thomas Cheriyan';
-      document.getElementById('i3').innerHTML='Chief Executive Of SIFFS';
+    //     document.getElementById('ins').innerHTML='This could be the next million dollar company...';
+    //   document.getElementById('i2').innerHTML='Mr. Thomas Cheriyan';
+    //   document.getElementById('i3').innerHTML='Chief Executive Of SIFFS';
+    document.getElementsByClassName('w3-panel w3-card-4 w3-light-grey')[0].innerHTML=" <p class='ent fade'> <i class='fa fa-quote-right' id='qq'></i><br><h4  class='fade' id='ins'>This could be the next million dollar company...</h4><i class='fa fa-quote-right fade' id='qq2' aria-hidden='true'></i> <span class='who fade' id='i2'>&nbsp; &nbsp;&nbsp;- Mr Thomas Cheriyan</span> <span class='who fade'  id='i3'>Chief Executive of SIFFS</span></p>";
       }
   
 //   slides[slideIndex-1].style.display = "block"; 
-  setTimeout(showSlides, 2500); // Change image every 2 seconds
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
     </script>
 
@@ -108,8 +112,8 @@ function showSlides() {
         <br>
            <h3 id="quoth" >What Our Partners Say...</h3>
             
-            <div class="w3-panel w3-card-4 w3-light-grey" style="width:100%">
-                    <p>
+            <div class="w3-panel w3-card-4 w3-light-grey " style="width:100%">
+                    <p class="ent fade">
                     <i class="fa fa-quote-right" id='qq'></i><br>
                     <h4 id="ins">This could be the next million dollar company...</h4>
                     <i class="fa fa-quote-right" id='qq2' aria-hidden="true"></i>
