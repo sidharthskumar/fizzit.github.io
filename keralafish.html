@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <head>    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
-    <script src="https://api4.windy.com/assets/libBoot.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
 <div id="map"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
-    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-    <style>
-#map {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ff7612fee004441886d8403f58ad3b37 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
 
 @keyframes fade { 
   from { opacity: 0.2; } 
@@ -35,243 +42,147 @@
 .blinking {
   animation: fade 1s infinite alternate;
 }
-#map_fb19b0734b2c406b9a49691e18e69128 {
+#map_ff7612fee004441886d8403f58ad3b37 {
         position: relative;
         width: 100.0%;
         height: 100.0%;
         left: 0.0%;
         top: 0.0%;
         }
-    </style>
+            </style>
+        
 </head>
 <body>    
-    <div id="windy"></div>
-    <div class="folium-map" id="map_fb19b0734b2c406b9a49691e18e69128" ></div>
+    
+            <div class="folium-map" id="map_ff7612fee004441886d8403f58ad3b37" ></div>
+        
 </body>
 <script>    
     
-    
-        var bounds = null;
-    
+            var map_ff7612fee004441886d8403f58ad3b37 = L.map(
+                "map_ff7612fee004441886d8403f58ad3b37",
+                {
+                    center: [11.25, 75.78],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    opacity: 4,
+                }
+            );
 
-    var map_fb19b0734b2c406b9a49691e18e69128 = L.map(
-        'map_fb19b0734b2c406b9a49691e18e69128', {
-        center: [11.25, 75.78],
-        zoom: 6,
-        maxBounds: bounds,
-        layers: [],
-        worldCopyJump: false,
-        crs: L.CRS.EPSG3857,
-        zoomControl: true,
-        });
+            
 
+        
     
-    
-    var tile_layer_b6e1afa2f77748f2b8f7bcb4db865c89 = L.tileLayer(
-        'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
-        {
-        "attribution": null,
-        "detectRetina": false,
-        "maxNativeZoom": 18,
-        "maxZoom": 18,
-        "minZoom": 0,
-        "noWrap": false,
-        "subdomains": "abc"
-}).addTo(map_fb19b0734b2c406b9a49691e18e69128);
-    
-    for(i=0;i<5;i++){
+            var tile_layer_dae33b92776342f091ded3164a2eaaf3 = L.tileLayer(
+                "https://{s}.tiles.mapbox.com/v3/mapbox.control-room/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u0026copy; \u003ca href=\"http://www.mapbox.com/about/maps\"\u003eMapbox\u003c/a\u003e Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ff7612fee004441886d8403f58ad3b37);
+        
+        for(i=0;i<5;i++){
 	k=i/3;
 
-            var circle_29d1f346247046e18753f4f5aa92c27a = L.circle(
+            var circle_f602199671f74fbc8c2a29af15613a5b = L.circle(
                 [15.71977, 72.783957],
-                {    className: 'blinking',
-  "bubblingMouseEvents": true,
-  "color": "white",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "#A6CAE0",
-  "fillOpacity": 0.2,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 50000*k,
-  "stroke": true,
-  "weight": 2
-}
-                )
-                .addTo(map_fb19b0734b2c406b9a49691e18e69128);	}
-            
+                {"bubblingMouseEvents": true,className: 'blinking', "color": "#3c6887", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A6CAE0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000*k, "stroke": true, "weight": 1}
+            ).addTo(map_ff7612fee004441886d8403f58ad3b37); }
+        
     
-            var popup_ad16e884ac6d45b482dd1d4656099ad3 = L.popup({maxWidth: '300'
-            
-            });
+        var popup_d0ea500eaf0e4246919f2da4efab2fa9 = L.popup({"maxWidth": "100%"});
 
-            
-                var html_a9ac4ab9c2824b3aaca52971bfcbfb62 = $('<div id="html_a9ac4ab9c2824b3aaca52971bfcbfb62" style="width: 100.0%; height: 100.0%;">Goa  lat-15.71977 lon-72.783957</div>')[0];
-                popup_ad16e884ac6d45b482dd1d4656099ad3.setContent(html_a9ac4ab9c2824b3aaca52971bfcbfb62);
-            
+        
+            var html_52bd0c914c2c43b1ba870d6cdcb8b525 = $(`<div id="html_52bd0c914c2c43b1ba870d6cdcb8b525" style="width: 100.0%; height: 100.0%;">Goa  lat-15.71977 lon-72.783957</div>`)[0];
+            popup_d0ea500eaf0e4246919f2da4efab2fa9.setContent(html_52bd0c914c2c43b1ba870d6cdcb8b525);
+        
 
-            circle_29d1f346247046e18753f4f5aa92c27a.bindPopup(popup_ad16e884ac6d45b482dd1d4656099ad3)
-            ;
+        circle_f602199671f74fbc8c2a29af15613a5b.bindPopup(popup_d0ea500eaf0e4246919f2da4efab2fa9)
+        ;
 
-            
-        //
-    for(i=0;i<3;i++){
+        
+        for(i=0;i<5;i++){
+	k=i/3;
+
+    
+            var circle_952bf01d6a0846b1bedd97dd134e6171 = L.circle(
+                [10.888408, 74.735292],
+                {"bubblingMouseEvents": true,className:'blinking', "color": "#3c6887", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A6CAE0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000*k, "stroke": true, "weight": 1}
+            ).addTo(map_ff7612fee004441886d8403f58ad3b37); }
+        
+    
+        var popup_e350ddf9a99b45c5aed664548585cec6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_47ce5a36e8e845dca1e5d766f7826a88 = $(`<div id="html_47ce5a36e8e845dca1e5d766f7826a88" style="width: 100.0%; height: 100.0%;">Manglore  lat-10.888408 lon-74.735292</div>`)[0];
+            popup_e350ddf9a99b45c5aed664548585cec6.setContent(html_47ce5a36e8e845dca1e5d766f7826a88);
+        
+
+        circle_952bf01d6a0846b1bedd97dd134e6171.bindPopup(popup_e350ddf9a99b45c5aed664548585cec6)
+        ;
+
+            for(i=0;i<5;i++){
 	k=i/2;
 
-            var circle_80ddc3236842408b8bc1074623db89b7 = L.circle(
-                [10.888408, 74.735292],
-                {    className: 'blinking',
-  "bubblingMouseEvents": true,
-  "color": "white",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "#A6CAE0",
-  "fillOpacity": 0.2,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 50000*k,
-  "stroke": true,
-  "weight": 2
-}
-                )
-                .addTo(map_fb19b0734b2c406b9a49691e18e69128); }
-            
     
-            var popup_2bae497f4a574e7da68e517c74b8ceda = L.popup({maxWidth: '300'
-            
-            });
-
-            
-                var html_2a328c74e37d4ad3881744f2aa636ac4 = $('<div id="html_2a328c74e37d4ad3881744f2aa636ac4" style="width: 100.0%; height: 100.0%;">Manglore  lat-10.888408 lon-74.735292</div>')[0];
-                popup_2bae497f4a574e7da68e517c74b8ceda.setContent(html_2a328c74e37d4ad3881744f2aa636ac4);
-            
-
-            circle_80ddc3236842408b8bc1074623db89b7.bindPopup(popup_2bae497f4a574e7da68e517c74b8ceda)
-            ;
-
-            
+    
+            var circle_77788f1d5ca040d9be1866d6e66d6dd7 = L.circle(
+                [10.853466000000001, 80.35593399999999],
+                {"bubblingMouseEvents": true,className:'blinking', "color": "#3c6887", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A6CAE0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000*k, "stroke": true, "weight": 1}
+            ).addTo(map_ff7612fee004441886d8403f58ad3b37); }
         
-    for(i=0;i<3;i++){
+    
+        var popup_fc35038c116b40acb49937e61e2b7d5e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_600afb8875ee4eefb0a938f31248df35 = $(`<div id="html_600afb8875ee4eefb0a938f31248df35" style="width: 100.0%; height: 100.0%;">Nagapattinam  lat-10.853466000000001 lon-80.35593399999999</div>`)[0];
+            popup_fc35038c116b40acb49937e61e2b7d5e.setContent(html_600afb8875ee4eefb0a938f31248df35);
+        
+
+        circle_77788f1d5ca040d9be1866d6e66d6dd7.bindPopup(popup_fc35038c116b40acb49937e61e2b7d5e)
+        ;
+
+        
+        for(i=0;i<5;i++){
 	k=i/5;
 
-            var circle_fe1f1f7ec35945308a685bc0339e599b = L.circle(
-                [10.853466000000001, 80.35593399999999],
-                {    className: 'blinking',
-  "bubblingMouseEvents": true,
-  "color": "white",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "#A6CAE0",
-  "fillOpacity": 0.2,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 50000*k,
-  "stroke": true,
-  "weight": 2
-}
-                )
-                .addTo(map_fb19b0734b2c406b9a49691e18e69128);	}
-            
     
-            var popup_ebaabdfbf6024c24b573971292576adc = L.popup({maxWidth: '300'
-            
-            });
-
-            
-                var html_db434201525443ccb19eb68ca16bd49f = $('<div id="html_db434201525443ccb19eb68ca16bd49f" style="width: 100.0%; height: 100.0%;">Nagapattinam  lat-10.853466000000001 lon-80.35593399999999</div>')[0];
-                popup_ebaabdfbf6024c24b573971292576adc.setContent(html_db434201525443ccb19eb68ca16bd49f);
-            
-
-            circle_fe1f1f7ec35945308a685bc0339e599b.bindPopup(popup_ebaabdfbf6024c24b573971292576adc)
-            ;
-
-            
-        
-  for(i=0;i<5;i++){
-	k=i/3;
-            var circle_f2948f5e19b346f182fdfbf8c26f4d99 = L.circle(
+            var circle_7eb2ebdcc8ca4052ac6b67cb54af518a = L.circle(
                 [9.812628, 75.847748],
-                {
-    className: 'blinking',
-  "bubblingMouseEvents": true,
-  "color": "white",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "#A6CAE0",
-  "fillOpacity": 0.2,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 50000*k,
-  "stroke": true,
-  "weight": 2
-}
-                )
-                .addTo(map_fb19b0734b2c406b9a49691e18e69128);		}
-            
-    
-            var popup_e3788800af2f4c45a66d7e5dfdf56f32 = L.popup({maxWidth: '300'
-            
-            });
-
-            
-                var html_d1b6ad1b59db4994bc6a9ad8de4859a6 = $('<div id="html_d1b6ad1b59db4994bc6a9ad8de4859a6" style="width: 100.0%; height: 100.0%;">Kochi  lat-9.812628 lon-75.847748</div>')[0];
-                popup_e3788800af2f4c45a66d7e5dfdf56f32.setContent(html_d1b6ad1b59db4994bc6a9ad8de4859a6);
-            
-
-            circle_f2948f5e19b346f182fdfbf8c26f4d99.bindPopup(popup_e3788800af2f4c45a66d7e5dfdf56f32)
-            ;
-
-            
+                {"bubblingMouseEvents": true,className:'blinking', "color": "#3c6887", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A6CAE0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000*k, "stroke": true, "weight": 1}
+            ).addTo(map_ff7612fee004441886d8403f58ad3b37);	}
         
-    for(i=0;i<5;i++){
+    
+        var popup_72aaf4c49f6b49ac9c12ad2c7ebe4076 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_33f5cd8509e84761a0911e3af5221df4 = $(`<div id="html_33f5cd8509e84761a0911e3af5221df4" style="width: 100.0%; height: 100.0%;">Kochi  lat-9.812628 lon-75.847748</div>`)[0];
+            popup_72aaf4c49f6b49ac9c12ad2c7ebe4076.setContent(html_33f5cd8509e84761a0911e3af5221df4);
+        
+
+        circle_7eb2ebdcc8ca4052ac6b67cb54af518a.bindPopup(popup_72aaf4c49f6b49ac9c12ad2c7ebe4076)
+        ;
+
+        
+    
+        for(i=0;i<5;i++){
 	k=i/3;
 
-            var circle_e37b26fb415340eca3e4664c57afa4f7 = L.circle(
+            var circle_ba28ca1e879642c6b4585966f0df10ef = L.circle(
                 [8.206206, 76.52521],
-                {    className: 'blinking',
-  "bubblingMouseEvents": true,
-  "color": "white",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "#A6CAE0",
-  "fillOpacity": 0.2,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 50000*k,
-  "stroke": true,
-  "weight": 3
-}
-                )
-                .addTo(map_fb19b0734b2c406b9a49691e18e69128);	}
-            
-    
-            var popup_e4c815dea2434df8905094f5c73badf1 = L.popup({maxWidth: '300'
-            
-            });
-
-            
-                var html_e2beed57da314280a832c6572979805e = $('<div id="html_e2beed57da314280a832c6572979805e" style="width: 100.0%; height: 100.0%;">Trivandrum  lat-8.206206 lon-76.52521</div>')[0];
-                popup_e4c815dea2434df8905094f5c73badf1.setContent(html_e2beed57da314280a832c6572979805e);
-            
-
-            circle_e37b26fb415340eca3e4664c57afa4f7.bindPopup(popup_e4c815dea2434df8905094f5c73badf1)
-            ;
-
-            
+                {"bubblingMouseEvents": true,className:'blinking', "color": "#3c6887", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A6CAE0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000*k, "stroke": true, "weight": 1}
+            ).addTo(map_ff7612fee004441886d8403f58ad3b37);}
         
+    
+        var popup_44df5b8c4d6d4b1dac2796a0155bbe9c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11dc75aa2a90409691fc20064176caa9 = $(`<div id="html_11dc75aa2a90409691fc20064176caa9" style="width: 100.0%; height: 100.0%;">Trivandrum  lat-8.206206 lon-76.52521</div>`)[0];
+            popup_44df5b8c4d6d4b1dac2796a0155bbe9c.setContent(html_11dc75aa2a90409691fc20064176caa9);
+        
+
+        circle_ba28ca1e879642c6b4585966f0df10ef.bindPopup(popup_44df5b8c4d6d4b1dac2796a0155bbe9c)
+        ;
+
+        
+    
 </script>
